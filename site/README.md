@@ -35,6 +35,10 @@ Google OAuth 正式發布與驗證需要任何使用者及審查人員都能在�
 - **政策網址：** `https://ice459pp.github.io/dhforge-site/privacy/` 與
   `https://ice459pp.github.io/dhforge-site/terms/`
 
+首頁 `<head>` 中的 `google-site-verification` 標記用於 Google Search Console 驗證這個網址
+前置字元資源。即使驗證完成也不得移除；若更換公開網址或 Google Cloud 專案，應依新的 Search
+Console 資源更新標記並重新完成網站所有權驗證。
+
 公開儲存庫是部署鏡像，不應加入 DSH 原始碼、測試輸出、OAuth Client Secret、access／refresh
 token、authorization code、完整 callback URL 或任何使用者資料。變更產品能力或資料處理方式時，
 先更新本目錄及相關插件契約，再同步公開部署副本；兩邊內容不得長期分歧。
