@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DSH Forge 隱私權政策，說明第三方 OAuth 連線、服務資料、憑證保存及 AI 處理方式。">
+    <meta name="theme-color" content="#0a0c10">
+    <link rel="canonical" href="https://ice459pp.github.io/dhforge-site/privacy/">
+    <link rel="icon" type="image/png" href="../assets/dsh-forge-google-oauth-logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <title>隱私權政策｜DSH Forge</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="主要導覽">
+        <a class="brand" href="../">
+          <span class="brand-mark"><img src="../assets/dsh-forge-google-oauth-logo.png" alt=""></span>
+          <span>DSH Forge</span>
+        </a>
+        <div class="nav-links">
+          <a href="../#connections">連線與服務</a>
+          <a href="./" aria-current="page">隱私權</a>
+          <a href="../terms/">服務條款</a>
+          <a href="https://github.com/ice459pp/dhforge">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <header class="legal-hero">
+        <p class="eyebrow">Privacy Policy</p>
+        <h1>隱私權政策</h1>
+        <p class="lede">本政策說明 DSH Forge 如何存取、使用、保存及分享使用者資料。</p>
+        <p class="meta">生效日期：2026 年 9 月 16 日　·　最後更新：2026 年 9 月 16 日</p>
+      </header>
+
+      <article class="legal">
+        <section>
+          <h2>1. 適用範圍</h2>
+          <p>
+            本政策適用於 DSH Forge 開源桌面應用程式、其第三方 OAuth／API 連線功能，以及本資訊網站。
+            DSH Forge 主要在使用者自己的電腦上運行；本專案目前不提供集中式使用者帳戶或代管第三方服務資料的雲端服務。
+          </p>
+        </section>
+
+        <section>
+          <h2>2. 我們處理的資料</h2>
+          <ul>
+            <li><strong>連線帳戶基本資料：</strong>供應商提供的帳戶識別碼、名稱或電子郵件地址，用於顯示目前連接的帳戶及防止帳戶混用。</li>
+            <li><strong>OAuth 授權資料：</strong>存取權杖、更新權杖、到期時間與已授予的權限範圍，保存在使用者本機的 DSH 憑證儲存空間。</li>
+            <li><strong>第三方服務內容：</strong>只有在使用者要求時，才依個別供應商的授權範圍讀取或寫入已啟用服務的資料。</li>
+            <li><strong>對話與工具結果：</strong>為了顯示工作結果，必要內容可能進入 DSH 對話與其既有本機歷史保存機制。</li>
+            <li><strong>網站技術資料：</strong>本網站未加入自有分析、廣告或追蹤程式；GitHub Pages 仍可能依 GitHub 自身政策處理 IP 位址、裝置與存取紀錄。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. 共用 OAuth 連線原則</h2>
+          <ul>
+            <li>所有供應商共用本政策、服務條款、帳戶狀態、憑證保存與撤銷原則，不為每個服務複製政策頁。</li>
+            <li>每個供應商及能力各自啟用並要求完成工作所需的最小權限；新增連線不會自動取得既有連線的資料。</li>
+            <li>模型只會看到已註冊、已啟用且已授權的有限工具；外部寫入另需針對該次目標與內容取得核准。</li>
+            <li>若供應商有額外政策或資料用途，會在本政策的供應商附錄中揭露，並以供應商的 OAuth 同意畫面為準。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. 供應商附錄：Google Workspace</h2>
+          <p>目前已實作的 Google 連線涵蓋以下八項服務；它們共用一個 Google 帳戶連線，但讀取與寫入能力仍分開授權。</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>服務</th><th>資料用途</th></tr></thead>
+              <tbody>
+                <tr><td>Gmail</td><td>列出與讀取使用者指定的郵件；使用者明確啟用並逐次核准後傳送純文字郵件。</td></tr>
+                <tr><td>Drive</td><td>讀取有限的檔案中繼資料；經核准建立資料夾。</td></tr>
+                <tr><td>Docs</td><td>讀取文件內容；經核准建立文件或插入文字。</td></tr>
+                <tr><td>Sheets</td><td>讀取試算表與有限儲存格範圍；經核准建立試算表或寫入明確範圍。</td></tr>
+                <tr><td>Slides</td><td>讀取簡報與頁面；經核准建立簡報或新增文字頁面。</td></tr>
+                <tr><td>Calendar</td><td>列出日曆與事件；經核准建立事件。</td></tr>
+                <tr><td>Chat</td><td>讀取有限空間與訊息；符合 Google Chat 設定且經核准後傳送訊息。</td></tr>
+                <tr><td>People</td><td>讀取個人聯絡人；經核准建立聯絡人。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>各服務分開啟用。DSH Forge 只要求目前功能必要的權限，不提供任意 Google API 請求工具，也不提供刪除 Google 資料的工具。</p>
+        </section>
+
+        <section>
+          <h2>5. 我們如何使用資料</h2>
+          <p>資料只用於下列目的：</p>
+          <ul>
+            <li>驗證供應商連接帳戶與維持使用者要求的 OAuth 授權；</li>
+            <li>完成使用者在 DSH Forge 中明確提出的讀取、整理、建立或傳送工作；</li>
+            <li>在執行外部寫入前，向使用者顯示實際目標與內容並取得該次核准；</li>
+            <li>維護安全性、錯誤診斷及防止未授權或重複寫入。</li>
+          </ul>
+          <p>DSH Forge 專案不販售第三方服務資料、不使用這些資料投放廣告，也不以這些資料建立或訓練通用 AI 或機器學習模型。</p>
+        </section>
+
+        <section>
+          <h2>6. AI 模型處理與資料分享</h2>
+          <p>
+            使用者要求 AI 分析已連線服務內容時，完成該次工作所需的內容可能傳送給使用者在 DSH Forge 中選擇或設定的 AI 模型供應商。
+            此處理是為了回應使用者當下提出的功能，並受該供應商的條款與隱私政策約束。使用者應避免提供超出工作所需的資料，並自行選擇符合其組織規範的模型供應商。
+          </p>
+          <p>
+            除了提供使用者要求功能的連線服務供應商、使用者選擇的 AI 模型供應商，以及提供本公開網站的 GitHub Pages 外，
+            DSH Forge 專案不會為廣告、資料仲介或獨立分析目的出售或分享第三方服務資料。
+          </p>
+          <div class="notice">
+            <strong>Google API Limited Use</strong>
+            DSH Forge 對從 Google API 取得之資訊的使用與轉移，將遵守
+            <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，
+            包括 Limited Use requirements。
+          </div>
+        </section>
+
+        <section>
+          <h2>7. 保存與安全</h2>
+          <ul>
+            <li>OAuth 憑證及必要設定保存在使用者本機的 DSH 憑證儲存空間，不寫入專案文件、測試資料或一般日誌。</li>
+            <li>必要的連線服務內容可能保留在使用者本機 DSH 對話歷史中；保存時間取決於使用者的本機歷史管理。</li>
+            <li>診斷資訊會避免記錄存取權杖、更新權杖、授權碼、完整 OAuth callback URL 或供應商回應正文。</li>
+            <li>所有外部寫入均採逐次核准；結果不明的寫入不會自動重試。</li>
+          </ul>
+          <p>任何安全措施都無法保證絕對安全。使用者應保護自己的電腦、DSH 環境與所選模型供應商帳戶。</p>
+        </section>
+
+        <section>
+          <h2>8. 使用者控制與刪除</h2>
+          <ul>
+            <li>可在 DSH Forge 中停用個別供應商或能力；停用服務不會刪除供應商端既有資料。</li>
+            <li>可解除第三方帳戶連線，以清除 DSH Forge 本機保存的相應 OAuth grant。</li>
+            <li>可前往各供應商的帳戶連線管理頁撤銷 DSH Forge 授權。</li>
+            <li>可依 DSH 提供的歷史管理功能刪除本機對話；已送往第三方服務的資料須在相應服務中管理。</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>9. 兒童隱私</h2>
+          <p>DSH Forge 並非以未滿 13 歲兒童為對象。我們不會蓄意要求兒童提供第三方帳戶資料。</p>
+        </section>
+
+        <section>
+          <h2>10. 政策更新</h2>
+          <p>功能或資料處理方式變更時，我們可能更新本政策，並在本頁調整「最後更新」日期。重大變更會在合理可行的情況下於專案或產品介面中說明。</p>
+        </section>
+
+        <section>
+          <h2>11. 聯絡方式</h2>
+          <p>如對本政策、資料使用或刪除方式有疑問，請透過 <a href="https://github.com/ice459pp/dhforge/issues">DSH Forge GitHub Issues</a> 聯絡專案維護者。請勿在公開 Issue 中貼出權杖、授權碼、郵件內容或其他敏感資料。</p>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-row shell">
+        <span>© 2026 DSH Forge contributors</span>
+        <div class="footer-links"><a href="../">首頁</a><a href="../terms/">服務條款</a><a href="https://github.com/ice459pp/dhforge">GitHub</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
